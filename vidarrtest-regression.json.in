@@ -44,7 +44,7 @@
             "dragenRNAseq.runDragenRNAseq.correctGcBias": null,
             "dragenRNAseq.runDragenRNAseq.enableRNAfusion": null,
             "dragenRNAseq.runDragenRNAseq.restrictToProteinCodingGenes": null,
-            "dragenRNAseq.runDragenSomatic.timeout": null
+            "dragenRNAseq.runDragenRNAseq.timeout": null
         },
         "description": "Runs RNAseq pipeline on downsampled HG008 data (DRAGEN testing dataset, Illumina).",
         "engineArguments": {
