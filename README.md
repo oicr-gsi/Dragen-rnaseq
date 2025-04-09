@@ -55,6 +55,10 @@ Parameter|Value|Default|Description
 Output | Type | Description | Labels
 ---|---|---|---
 `splicingJunctions`|File|output splice junctions|
+`transcriptQuantification`|File|transcript expression quantification|
+`geneQuantification`|File|gene-level expression quantification|
+`chimericJunctions`|File|Predicted chimeric junction|
+`fusionCandidates`|File|Fusion candidates, CSV file|
 
 
 ## Commands

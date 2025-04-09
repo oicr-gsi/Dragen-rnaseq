@@ -1,0 +1,6 @@
+{
+    "names": [
+        "dragenRNAseq"
+    ],
+    "wdl": "dragenRNAseq.wdl"
+}

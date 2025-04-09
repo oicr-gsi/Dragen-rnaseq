@@ -1,0 +1,106 @@
+[
+{
+        "arguments": {
+            "dragenRNAseq.outputFileNamePrefix": "HG008",
+            "dragenRNAseq.reference": "hg38",
+            "dragenRNAseq.fastqInputs": [
+                {
+                    "fastqR1": {
+                        "contents": {
+                            "configuration": "/.mounts/labs/gsi/testdata/dragenRNAseq/input_data/HG008-N_Illumina_R1_10M.fastq.gz",
+                            "externalIds": [
+                                {
+                                    "id": "TEST",
+                                    "provider": "TEST"
+                                }
+                            ]
+                        },
+                        "type": "EXTERNAL"
+                    },
+                    "fastqR2": {
+                        "contents": {
+                            "configuration": "/.mounts/labs/gsi/testdata/dragenRNAseq/input_data/HG008-N_Illumina_R2_10M.fastq.gz",
+                            "externalIds": [
+                                {
+                                    "id": "TEST",
+                                    "provider": "TEST"
+                                }
+                            ]
+                        },
+                        "type": "EXTERNAL"
+                    },
+                    "readGroup": "ID:HG008-N_01_LB01-01_3_GCGATG-ATCGTG PL:Illumina PU:HG008-N_01_LB01-01 LB:HG008-N_01_LB01-01 SM:HG008-N_01_LB01-01 CM:OICR"
+                }
+            ],
+            "dragenRNAseq.composeList.jobMemory": null,
+            "dragenRNAseq.composeList.timeout": null,
+            "dragenRNAseq.composeList.listWritingScript": null,
+            "dragenRNAseq.composeList.modules": null,
+            "dragenRNAseq.extractInfoLine.jobMemory": null,
+            "dragenRNAseq.extractInfoLine.timeout": null,
+            "dragenRNAseq.extractInfoLine.modules": null,
+            "dragenRNAseq.extractInfoLine.parsingScript": null,
+            "dragenRNAseq.runDragenRNAseq.additionalParameters": null,
+            "dragenRNAseq.runDragenRNAseq.correctGcBias": null,
+            "dragenRNAseq.runDragenRNAseq.enableRNAfusion": null,
+            "dragenRNAseq.runDragenRNAseq.restrictToProteinCodingGenes": null,
+            "dragenRNAseq.runDragenSomatic.timeout": null
+        },
+        "description": "Runs RNAseq pipeline on downsampled HG008 data (DRAGEN testing dataset, Illumina).",
+        "engineArguments": {
+            "write_to_cache": false,
+            "read_from_cache": false
+        },
+        "id": "HG008",
+        "metadata": {
+            "dragenRNAseq.splicingJunctions": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_dragenRNAseq_HG008_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "dragenRNAseq.transcriptQuantification": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_dragenRNAseq_HG008_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "dragenRNAseq.geneQuantification": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_dragenRNAseq_HG008_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "dragenRNAseq.chimericJunctions": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_dragenRNAseq_HG008_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "dragenRNAseq.fusionCandidates": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_dragenRNAseq_HG008_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/dragenRNAseq/1.0.0/output_metrics/HG008.metrics",
+                "type": "script"
+            }
+        ]
+}
+]

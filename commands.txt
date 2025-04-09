@@ -1,0 +1,37 @@
+## Commands
+This section lists command(s) run by dragenRNAseqWORKFLOW workflow
+
+* dragenRNAseq
+
+This workflow generates results for the following analyses -
+
+* Gene fusiion analysis
+* Gene expression quantification
+* Alignment QC and other metrics
+
+### Extract info for a single input file 
+
+```
+    python3 ~{parsingScript} -i ~{write_json(fastqInput)}
+```
+
+### Compose a list of inputs
+
+```
+   python3 ~{listWritingScript} -o ~{outputFileName} -l "~{sep=';' inputLines}"
+```
+
+### Run RNAseq pipeline on the input fastq files
+
+```
+   dragen -f -r ~{refDir} \
+   --enable-rna true \
+   --annotation-file ~{annotationGTF} \
+   --enable-rna-quantification true \
+   --rna-quantification-gc-bias ~{correctGcBias} \
+   --enable-rna-gene-fusion ~{enableRNAfusion} \
+   --rna-gf-restrict-genes ~{restrictToProteinCodingGenes} \
+   --fastq-list ~{fastqList} \
+   --output-directory . \
+   --output-file-prefix ~{outputFileNamePrefix} ~{additionalParameters}
+```
