@@ -7,6 +7,7 @@ A workflow for calling SNVs on tumor-only or tumor-normal inputs in somatic mode
 ## Dependencies
 
 * [gsi modules : gencode 31](https://gitlab.oicr.on.ca/ResearchIT/modulator)
+* [gsi modules : gencode 44](https://gitlab.oicr.on.ca/ResearchIT/modulator)
 * [gsi modules : dragen-scripts 0.3](https://gitlab.oicr.on.ca/ResearchIT/modulator)
 
 

@@ -30,6 +30,11 @@ workflow dragenRNAseq {
       "annotationGTF": "/.mounts/labs/gsiprojects/gsi/Dragen/reference/gencode/gencode.v31.annotation.gtf",
       "referenceDirectory": "/.mounts/labs/gsiprojects/gsi/Dragen/reference/hg38fa.p12/",
       "dragenVersion": "4.2.4"
+    },
+    "hg38_noAlt": {
+      "annotationGTF": "/.mounts/labs/gsiprojects/gsi/Dragen/reference/gencode/gencode.v44.annotation.gtf",
+      "referenceDirectory": "/.mounts/labs/gsiprojects/gsi/Dragen/reference/hg38_noAlt-p12/",
+      "dragenVersion": "4.2.4"
     }}
 
     String dragen_ref = dragen_resources_by_genome [ reference ].referenceDirectory
